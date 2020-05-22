@@ -89,6 +89,9 @@
     )
   )
   (placement
+    (component Custom_Graphics:Shape_Taker_Logo_1300_DPI
+      (place G*** 85598 -63754 back 0 (PN LOGO))
+    )
     (component Thonkiconn:thonkiconn_fuzzySi
       (place J1 85500 -144399 front 0 (PN SIGNAL_OUT))
       (place J3 85500 -98869.5 front 0 (PN CV2))
@@ -115,8 +118,13 @@
     (component "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical"
       (place RV1 83000 -67056 front 90 (PN R_POT))
     )
+    (component TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm
+      (place TP1 78536.8 -83058 front 90 (PN OFFSET_ADJ_TP))
+    )
   )
   (library
+    (image Custom_Graphics:Shape_Taker_Logo_1300_DPI
+    )
     (image Thonkiconn:thonkiconn_fuzzySi
       (outline (path signal 150  1300 0  1221.6 -444.626  995.858 -835.624  650 -1125.83
             225.743 -1280.25  -225.743 -1280.25  -650 -1125.83  -995.858 -835.624
@@ -321,6 +329,19 @@
       (pin Oval[A]Pad_2720x3240_um (rotate 90) @1 7500 -7300)
       (pin Oval[A]Pad_2720x3240_um (rotate 90) @2 7500 2300)
     )
+    (image TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm
+      (outline (path signal 50  6880 -1800  -1800 -1800))
+      (outline (path signal 50  6880 -1800  6880 1800))
+      (outline (path signal 50  -1800 1800  -1800 -1800))
+      (outline (path signal 50  -1800 1800  6880 1800))
+      (outline (path signal 100  5080 0  0 0))
+      (outline (path signal 120  -1500 1500  -1500 -1500))
+      (outline (path signal 120  6600 -1500  6600 1500))
+      (outline (path signal 120  -1500 1500  6600 1500))
+      (outline (path signal 120  6600 -1500  -1500 -1500))
+      (pin RoundRect[A]Pad_2600x2600_652.473_um 1 0 0)
+      (pin Round[A]Pad_2600_um 2 5080 0)
+    )
     (padstack Round[A]Pad_1440_um
       (shape (circle F.Cu 1440))
       (shape (circle B.Cu 1440))
@@ -331,6 +352,11 @@
       (shape (circle B.Cu 1800))
       (attach off)
     )
+    (padstack Round[A]Pad_2600_um
+      (shape (circle F.Cu 2600))
+      (shape (circle B.Cu 2600))
+      (attach off)
+    )
     (padstack Oval[A]Pad_1700x1700_um
       (shape (path F.Cu 1700  0 0  0 0))
       (shape (path B.Cu 1700  0 0  0 0))
@@ -339,6 +365,31 @@
     (padstack Oval[A]Pad_2720x3240_um
       (shape (path F.Cu 2720  0 -260  0 260))
       (shape (path B.Cu 2720  0 -260  0 260))
+      (attach off)
+    )
+    (padstack RoundRect[A]Pad_2600x2600_652.473_um
+      (shape (polygon F.Cu 0  763.301 1292.56  873.159 1263.12  976.236 1215.06  1069.4 1149.82
+            1149.82 1069.4  1215.06 976.237  1263.12 873.159  1292.56 763.301
+            1302.47 650  1302.47 -650  1292.56 -763.301  1263.12 -873.159
+            1215.06 -976.236  1149.82 -1069.4  1069.4 -1149.82  976.237 -1215.06
+            873.159 -1263.12  763.301 -1292.56  650 -1302.47  -650 -1302.47
+            -763.301 -1292.56  -873.159 -1263.12  -976.236 -1215.06  -1069.4 -1149.82
+            -1149.82 -1069.4  -1215.06 -976.237  -1263.12 -873.159  -1292.56 -763.301
+            -1302.47 -650  -1302.47 650  -1292.56 763.301  -1263.12 873.159
+            -1215.06 976.236  -1149.82 1069.4  -1069.4 1149.82  -976.237 1215.06
+            -873.159 1263.12  -763.301 1292.56  -650 1302.47  650 1302.47
+            763.301 1292.56))
+      (shape (polygon B.Cu 0  763.301 1292.56  873.159 1263.12  976.236 1215.06  1069.4 1149.82
+            1149.82 1069.4  1215.06 976.237  1263.12 873.159  1292.56 763.301
+            1302.47 650  1302.47 -650  1292.56 -763.301  1263.12 -873.159
+            1215.06 -976.236  1149.82 -1069.4  1069.4 -1149.82  976.237 -1215.06
+            873.159 -1263.12  763.301 -1292.56  650 -1302.47  -650 -1302.47
+            -763.301 -1292.56  -873.159 -1263.12  -976.236 -1215.06  -1069.4 -1149.82
+            -1149.82 -1069.4  -1215.06 -976.237  -1263.12 -873.159  -1292.56 -763.301
+            -1302.47 -650  -1302.47 650  -1292.56 763.301  -1263.12 873.159
+            -1215.06 976.236  -1149.82 1069.4  -1069.4 1149.82  -976.237 1215.06
+            -873.159 1263.12  -763.301 1292.56  -650 1302.47  650 1302.47
+            763.301 1292.56))
       (attach off)
     )
     (padstack Rect[A]Pad_2500x1000_um
@@ -364,7 +415,7 @@
   )
   (network
     (net GND
-      (pins J1-1 J1-2 J2-2 J2-1 J3-1 J3-2 J4-2 J4-1 J6-9 J6-10)
+      (pins J1-1 J1-2 J2-2 J2-1 J3-1 J3-2 J4-2 J4-1 J6-9 J6-10 TP1-1)
     )
     (net /SIGNAL_OUT
       (pins J1-3 J5-6)
@@ -379,7 +430,7 @@
       (pins J4-3 J5-4)
     )
     (net /OFFSET_ADJ
-      (pins J5-3 RV1-2)
+      (pins J5-3 RV1-2 TP1-2)
     )
     (net /BIAS
       (pins J5-5 RV3-2)

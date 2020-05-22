@@ -402,4 +402,28 @@ F 3 "~" H 8850 3275 50  0001 C CNN
 	1    8850 3275
 	-1   0    0    1   
 $EndComp
+$Comp
+L Connector:TestPoint_2Pole TP1
+U 1 1 5EC92ABA
+P 3825 3200
+F 0 "TP1" H 3825 3395 50  0000 C CNN
+F 1 "OFFSET_ADJ_TP" H 3825 3304 50  0000 C CNN
+F 2 "TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm" H 3825 3200 50  0001 C CNN
+F 3 "~" H 3825 3200 50  0001 C CNN
+	1    3825 3200
+	1    0    0    -1  
+$EndComp
+Text Label 4025 3200 0    50   ~ 0
+OFFSET_ADJ
+$Comp
+L power:GND #PWR0112
+U 1 1 5EC935CF
+P 3625 3200
+F 0 "#PWR0112" H 3625 2950 50  0001 C CNN
+F 1 "GND" H 3630 3027 50  0000 C CNN
+F 2 "" H 3625 3200 50  0001 C CNN
+F 3 "" H 3625 3200 50  0001 C CNN
+	1    3625 3200
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
