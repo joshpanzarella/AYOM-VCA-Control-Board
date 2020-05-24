@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "/Users/joshpanzarella/Documents/KiCad Projects/AYOMSM - VCA Control Board/AYOMSM - VCA Control Board.sch")
-    (date "Sunday, May 24, 2020 at 11:59:56 AM")
+    (date "Sunday, May 24, 2020 at 12:41:05 PM")
     (tool "Eeschema (5.1.5-0-10_14)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
