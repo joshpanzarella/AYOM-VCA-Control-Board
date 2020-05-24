@@ -1,4 +1,4 @@
-update=Monday, May 18, 2020 at 09:04:17 PM
+update=Sunday, May 24, 2020 at 12:28:32 PM
 version=1
 last_client=kicad
 [general]
@@ -39,8 +39,8 @@ MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 TrackWidth1=0.4
-ViaDiameter1=0.8
-ViaDrill1=0.4
+ViaDiameter1=1
+ViaDrill1=0.6
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
@@ -70,7 +70,7 @@ SolderPasteClearance=0
 SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
-Type=0
+Type=2
 Enabled=1
 [pcbnew/Layer.In1.Cu]
 Name=In1.Cu
@@ -194,7 +194,7 @@ Type=0
 Enabled=0
 [pcbnew/Layer.B.Cu]
 Name=B.Cu
-Type=0
+Type=2
 Enabled=1
 [pcbnew/Layer.B.Adhes]
 Enabled=1
@@ -239,8 +239,8 @@ Enabled=0
 Name=Default
 Clearance=0.3
 TrackWidth=0.4
-ViaDiameter=0.8
-ViaDrill=0.4
+ViaDiameter=1
+ViaDrill=0.6
 uViaDiameter=0.3
 uViaDrill=0.1
 dPairWidth=0.2

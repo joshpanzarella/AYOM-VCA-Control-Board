@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "/Users/joshpanzarella/Documents/KiCad Projects/AYOMSM - VCA Control Board/AYOMSM - VCA Control Board.sch")
-    (date "Thursday, May 21, 2020 at 09:32:13 PM")
+    (date "Sunday, May 24, 2020 at 11:59:56 AM")
     (tool "Eeschema (5.1.5-0-10_14)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -70,7 +70,7 @@
       (tstamp 5EC4EF9D))
     (comp (ref SW1)
       (value SW_SPDT)
-      (footprint Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical)
+      (footprint Custom:Mini_Toggle_Switch_SPDT_ON-ON)
       (datasheet ~)
       (libsource (lib Switch) (part SW_SPDT) (description "Switch, single pole double throw"))
       (sheetpath (names /) (tstamps /))
