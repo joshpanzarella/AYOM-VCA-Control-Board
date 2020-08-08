@@ -348,13 +348,11 @@ Wire Wire Line
 Text Label 3800 3575 0    50   ~ 0
 TRIM_1
 Wire Wire Line
-	3800 3675 3800 3575
+	3800 3675 3800 3625
 Wire Wire Line
-	3950 3825 4050 3825
+	3950 3825 4000 3825
 Wire Wire Line
 	3800 3975 3800 4100
-Text Label 4050 3825 0    50   ~ 0
-TRIM_2
 Text Label 3800 4100 0    50   ~ 0
 TRIM_3
 Text Label 5250 3800 2    50   ~ 0
@@ -426,4 +424,11 @@ F 3 "" H 3625 3200 50  0001 C CNN
 	1    3625 3200
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	3800 3625 4000 3625
+Wire Wire Line
+	4000 3625 4000 3825
+Connection ~ 3800 3625
+Wire Wire Line
+	3800 3625 3800 3575
 $EndSCHEMATC
