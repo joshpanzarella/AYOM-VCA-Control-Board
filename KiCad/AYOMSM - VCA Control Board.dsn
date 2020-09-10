@@ -1,4 +1,4 @@
-(pcb "/Users/joshpanzarella/Documents/KiCad Projects/AYOMSM - VCA Control Board/AYOMSM - VCA Control Board.dsn"
+(pcb "/Users/joshpanzarella/Documents/KiCad Projects/AYOMSM - VCA Control Board/KiCad/AYOMSM - VCA Control Board.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -82,10 +82,10 @@
             86360.7 -96265.1  86021.1 -96184.6  85674.5 -96144.1  85325.5 -96144.1))
     (via "Via[0-1]_1000:600_um")
     (rule
-      (width 400)
-      (clearance 300.1)
-      (clearance 300.1 (type default_smd))
-      (clearance 75 (type smd_smd))
+      (width 300)
+      (clearance 250.1)
+      (clearance 250.1 (type default_smd))
+      (clearance 62.5 (type smd_smd))
     )
   )
   (placement
@@ -99,25 +99,25 @@
       (place J6 92646.5 -127965 back 0 (PN CONN_2))
     )
     (component Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical
-      (place RV2 82950 -77470 front 180 (PN TRIM))
+      (place RV2 82950 -77851 front 180 (PN TRIM))
     )
     (component Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical::1
-      (place RV3 88050 -71437.5 front 0 (PN BIAS))
+      (place RV3 88050 -57404 front 0 (PN BIAS))
     )
     (component "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical"
-      (place RV1 83000 -67056 front 90 (PN R_POT))
+      (place RV1 83000 -73556 front 90 (PN "OFFSET ADJUST"))
     )
     (component TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm
-      (place TP1 78549.5 -102489 front 90 (PN OFFSET_ADJ_TP))
+      (place TP1 92710 -102108 front 90 (PN OFFSET_ADJ_TP))
     )
     (component "Custom:Mini_Toggle_Switch_SPDT_ON-ON"
-      (place SW1 85849.2 -85217 front 270 (PN SW_SPDT))
+      (place SW1 85849.2 -85217 front 270 (PN "LIN_LOG SW"))
     )
     (component Thonkiconn:thonkiconn_fuzzySi
-      (place J2 85471 -99822 front 0 (PN CV1))
-      (place J3 85471 -114681 front 0 (PN CV2))
-      (place J4 85471 -129794 front 0 (PN SIGNAL_IN))
-      (place J1 85471 -144780 front 0 (PN SIGNAL_OUT))
+      (place CV1 85471 -99822 front 0 (PN CV1))
+      (place CV2 85471 -114681 front 0 (PN CV2))
+      (place "SIGNAL IN" 85471 -129794 front 0 (PN SIGNAL_IN))
+      (place "SIGNAL OUT" 85471 -144780 front 0 (PN SIGNAL_OUT))
     )
   )
   (library
@@ -376,19 +376,20 @@
   )
   (network
     (net GND
-      (pins J6-9 J6-10 TP1-1 J2-2 J2-1 J3-2 J3-1 J4-2 J4-1 J1-2 J1-1)
+      (pins J6-9 J6-10 TP1-1 CV1-2 CV1-1 CV2-2 CV2-1 "SIGNAL IN"-2 "SIGNAL IN"-1 "SIGNAL OUT"-2
+        "SIGNAL OUT"-1)
     )
     (net /SIGNAL_OUT
-      (pins J5-6 J1-3)
+      (pins J5-6 "SIGNAL OUT"-3)
     )
     (net /CV1
-      (pins J5-1 J2-3)
+      (pins J5-1 CV1-3)
     )
     (net /CV2
-      (pins J5-2 J3-3)
+      (pins J5-2 CV2-3)
     )
     (net /SIGNAL_IN
-      (pins J5-4 J4-3)
+      (pins J5-4 "SIGNAL IN"-3)
     )
     (net /OFFSET_ADJ
       (pins J5-3 RV1-2 TP1-2)
@@ -423,8 +424,8 @@
         (use_via Via[0-1]_1000:600_um)
       )
       (rule
-        (width 400)
-        (clearance 300.1)
+        (width 300)
+        (clearance 250.1)
       )
     )
   )
