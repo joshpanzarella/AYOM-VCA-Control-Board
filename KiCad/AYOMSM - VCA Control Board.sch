@@ -163,17 +163,6 @@ F 3 "" H 2625 2675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Thonkiconn:fuzzySI_thonkiconn J4
-U 1 1 5EC4DB7C
-P 2375 3350
-F 0 "J4" H 2353 3675 50  0000 C CNN
-F 1 "SIGNAL_IN" H 2353 3584 50  0000 C CNN
-F 2 "Thonkiconn:thonkiconn_fuzzySi" H 2625 3450 50  0001 C CNN
-F 3 "" H 2625 3450 50  0001 C CNN
-	1    2375 3350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_POT_TRIM RV3
 U 1 1 5EC4E5A1
 P 5025 2000
@@ -228,17 +217,6 @@ F 3 "" H 2175 2000 50  0001 C CNN
 	1    2175 2000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2175 1875 2175 1925
-Wire Wire Line
-	2575 1775 2625 1775
-Wire Wire Line
-	2625 1775 2625 1925
-Wire Wire Line
-	2625 1925 2175 1925
-Connection ~ 2175 1925
-Wire Wire Line
-	2175 1925 2175 2000
 $Comp
 L power:GND #PWR0107
 U 1 1 5EC52690
@@ -250,17 +228,6 @@ F 3 "" H 2175 2775 50  0001 C CNN
 	1    2175 2775
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2175 2675 2175 2725
-Wire Wire Line
-	2575 2575 2625 2575
-Wire Wire Line
-	2625 2575 2625 2725
-Wire Wire Line
-	2625 2725 2175 2725
-Connection ~ 2175 2725
-Wire Wire Line
-	2175 2725 2175 2775
 Text Label 2575 1675 0    50   ~ 0
 CV1
 Text Label 2575 2475 0    50   ~ 0
@@ -276,17 +243,6 @@ F 3 "" H 2175 3575 50  0001 C CNN
 	1    2175 3575
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2175 3575 2175 3500
-Wire Wire Line
-	2575 3350 2625 3350
-Wire Wire Line
-	2625 3350 2625 3500
-Wire Wire Line
-	2625 3500 2175 3500
-Connection ~ 2175 3500
-Wire Wire Line
-	2175 3500 2175 3450
 Text Label 2575 3250 0    50   ~ 0
 SIGNAL_IN
 $Comp
@@ -300,17 +256,6 @@ F 3 "" H 2550 4425 50  0001 C CNN
 	1    2550 4425
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2550 4425 2550 4350
-Wire Wire Line
-	2150 4200 2075 4200
-Wire Wire Line
-	2075 4200 2075 4350
-Wire Wire Line
-	2075 4350 2550 4350
-Connection ~ 2550 4350
-Wire Wire Line
-	2550 4350 2550 4300
 Text Label 2150 4100 2    50   ~ 0
 SIGNAL_OUT
 $Comp
@@ -430,4 +375,27 @@ Connection ~ 3800 3625
 Wire Wire Line
 	3800 3625 3800 3575
 NoConn ~ 8900 2775
+Wire Wire Line
+	2175 1875 2175 2000
+Wire Wire Line
+	2175 2675 2175 2775
+$Comp
+L Thonkiconn:fuzzySI_thonkiconn J4
+U 1 1 5EC4DB7C
+P 2375 3350
+F 0 "J4" H 2353 3675 50  0000 C CNN
+F 1 "SIGNAL_IN" H 2353 3584 50  0000 C CNN
+F 2 "Thonkiconn:thonkiconn_fuzzySi" H 2625 3450 50  0001 C CNN
+F 3 "" H 2625 3450 50  0001 C CNN
+	1    2375 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2175 3450 2175 3575
+Wire Wire Line
+	2550 4300 2550 4425
+NoConn ~ 2575 1775
+NoConn ~ 2575 2575
+NoConn ~ 2575 3350
+NoConn ~ 2150 4200
 $EndSCHEMATC

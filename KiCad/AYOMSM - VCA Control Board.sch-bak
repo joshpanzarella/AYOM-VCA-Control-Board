@@ -55,8 +55,6 @@ Text Label 8900 2575 2    50   ~ 0
 LOG_LIN_SW_3
 Text Label 8900 2675 2    50   ~ 0
 TRIM_1
-Text Label 8900 2775 2    50   ~ 0
-TRIM_2
 Text Label 8900 2875 2    50   ~ 0
 TRIM_3
 $Comp
@@ -431,4 +429,5 @@ Wire Wire Line
 Connection ~ 3800 3625
 Wire Wire Line
 	3800 3625 3800 3575
+NoConn ~ 8900 2775
 $EndSCHEMATC
