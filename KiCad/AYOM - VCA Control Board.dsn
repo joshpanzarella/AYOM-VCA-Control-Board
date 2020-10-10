@@ -105,19 +105,25 @@
       (place RV3 88050 -57404 front 0 (PN BIAS))
     )
     (component "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical"
-      (place RV1 83000 -73556 front 90 (PN "OFFSET ADJUST"))
+      (place RV1 83000 -73556 front 90 (PN OFFSET_ADJ))
     )
     (component TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm
       (place TP1 92710 -102108 front 90 (PN OFFSET_ADJ_TP))
     )
     (component "Custom:Mini_Toggle_Switch_SPDT_ON-ON"
-      (place SW1 85849.2 -85217 front 270 (PN "LIN_LOG SW"))
+      (place SW1 85849.2 -85217 front 270 (PN LIN_LOG_SW))
     )
     (component Thonkiconn:thonkiconn_fuzzySi
       (place CV1 85471 -99822 front 0 (PN CV1))
       (place CV2 85471 -114681 front 0 (PN CV2))
-      (place "SIGNAL IN" 85471 -129794 front 0 (PN SIGNAL_IN))
-      (place "SIGNAL OUT" 85471 -144780 front 0 (PN SIGNAL_OUT))
+      (place SIGNAL_IN 85471 -129794 front 0 (PN SIGNAL_IN))
+      (place SIGNAL_OUT 85471 -144780 front 0 (PN SIGNAL_OUT))
+    )
+    (component LED_THT:LED_D3.0mm
+      (place D1 79814 -150633 front 180 (PN PWR_LED))
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+      (place R1 79114 -147183 front 90 (PN 1.8K))
     )
   )
   (library
@@ -298,9 +304,50 @@
       (pin Rect[A]Pad_2500x1000_um 2 0 -3380)
       (pin Rect[A]Pad_2500x1000_um 1 0 -6480)
     )
+    (image LED_THT:LED_D3.0mm
+      (outline (path signal 100  2770 0  2688.73 -487.049  2453.71 -921.319  2090.42 -1255.75
+            1638.23 -1454.1  1146.13 -1494.88  667.457 -1373.66  254.078 -1103.59
+            -49.211 -713.921  -209.542 -246.892  -209.542 246.892  -49.211 713.921
+            254.078 1103.59  667.457 1373.66  1146.13 1494.88  1638.23 1454.1
+            2090.42 1255.75  2453.71 921.319  2688.73 487.049  2770 0))
+      (outline (path signal 100  -230 1166.19  -230 -1166.19))
+      (outline (path signal 120  -290 1236  -290 1080))
+      (outline (path signal 120  -290 -1080  -290 -1236))
+      (outline (path signal 50  -1150 2250  -1150 -2250))
+      (outline (path signal 50  -1150 -2250  3700 -2250))
+      (outline (path signal 50  3700 -2250  3700 2250))
+      (outline (path signal 50  3700 2250  -1150 2250))
+      (pin Rect[A]Pad_1800x1800_um 1 0 0)
+      (pin Round[A]Pad_1800_um 2 2540 0)
+    )
+    (image Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+      (outline (path signal 100  660 1250  660 -1250))
+      (outline (path signal 100  660 -1250  6960 -1250))
+      (outline (path signal 100  6960 -1250  6960 1250))
+      (outline (path signal 100  6960 1250  660 1250))
+      (outline (path signal 100  0 0  660 0))
+      (outline (path signal 100  7620 0  6960 0))
+      (outline (path signal 120  540 1040  540 1370))
+      (outline (path signal 120  540 1370  7080 1370))
+      (outline (path signal 120  7080 1370  7080 1040))
+      (outline (path signal 120  540 -1040  540 -1370))
+      (outline (path signal 120  540 -1370  7080 -1370))
+      (outline (path signal 120  7080 -1370  7080 -1040))
+      (outline (path signal 50  -1050 1500  -1050 -1500))
+      (outline (path signal 50  -1050 -1500  8670 -1500))
+      (outline (path signal 50  8670 -1500  8670 1500))
+      (outline (path signal 50  8670 1500  -1050 1500))
+      (pin Round[A]Pad_1600_um 1 0 0)
+      (pin Oval[A]Pad_1600x1600_um 2 7620 0)
+    )
     (padstack Round[A]Pad_1440_um
       (shape (circle F.Cu 1440))
       (shape (circle B.Cu 1440))
+      (attach off)
+    )
+    (padstack Round[A]Pad_1600_um
+      (shape (circle F.Cu 1600))
+      (shape (circle B.Cu 1600))
       (attach off)
     )
     (padstack Round[A]Pad_1800_um
@@ -311,6 +358,11 @@
     (padstack Round[A]Pad_2600_um
       (shape (circle F.Cu 2600))
       (shape (circle B.Cu 2600))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1600x1600_um
+      (shape (path F.Cu 1600  0 0  0 0))
+      (shape (path B.Cu 1600  0 0  0 0))
       (attach off)
     )
     (padstack Oval[A]Pad_1700x1700_um
@@ -376,11 +428,10 @@
   )
   (network
     (net GND
-      (pins J6-9 J6-10 TP1-1 CV1-2 CV1-1 CV2-2 CV2-1 "SIGNAL IN"-2 "SIGNAL IN"-1 "SIGNAL OUT"-2
-        "SIGNAL OUT"-1)
+      (pins J6-9 J6-10 TP1-1 CV1-1 CV2-1 SIGNAL_IN-1 SIGNAL_OUT-1 D1-1)
     )
     (net /SIGNAL_OUT
-      (pins J5-6 "SIGNAL OUT"-3)
+      (pins J5-6 SIGNAL_OUT-3)
     )
     (net /CV1
       (pins J5-1 CV1-3)
@@ -389,7 +440,7 @@
       (pins J5-2 CV2-3)
     )
     (net /SIGNAL_IN
-      (pins J5-4 "SIGNAL IN"-3)
+      (pins J5-4 SIGNAL_IN-3)
     )
     (net /OFFSET_ADJ
       (pins J5-3 RV1-2 TP1-2)
@@ -407,19 +458,39 @@
       (pins J6-3 SW1-3)
     )
     (net /TRIM_1
-      (pins J6-4 J6-5 RV2-2 RV2-1)
+      (pins J6-4 RV2-2 RV2-1)
     )
     (net /TRIM_3
       (pins J6-6 RV2-3)
     )
     (net +12V
-      (pins J6-7 RV3-1 RV1-3)
+      (pins J6-7 RV3-1 RV1-3 R1-2)
     )
     (net -12V
       (pins J6-8 RV3-3 RV1-1)
     )
+    (net "Net-(D1-Pad2)"
+      (pins D1-2 R1-1)
+    )
+    (net "Net-(J1-Pad2)"
+      (pins SIGNAL_OUT-2)
+    )
+    (net "Net-(J2-Pad2)"
+      (pins CV1-2)
+    )
+    (net "Net-(J3-Pad2)"
+      (pins CV2-2)
+    )
+    (net "Net-(J4-Pad2)"
+      (pins SIGNAL_IN-2)
+    )
+    (net "Net-(J6-Pad5)"
+      (pins J6-5)
+    )
     (class kicad_default "" +12V -12V /BIAS /CV1 /CV2 /LOG_LIN_SW_1 /LOG_LIN_SW_2
       /LOG_LIN_SW_3 /OFFSET_ADJ /SIGNAL_IN /SIGNAL_OUT /TRIM_1 /TRIM_3 GND
+      "Net-(D1-Pad2)" "Net-(J1-Pad2)" "Net-(J2-Pad2)" "Net-(J3-Pad2)" "Net-(J4-Pad2)"
+      "Net-(J6-Pad5)"
       (circuit
         (use_via Via[0-1]_1000:600_um)
       )
